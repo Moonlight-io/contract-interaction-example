@@ -1,0 +1,9 @@
+{
+  "name": "contract-interaction-example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "@cityofzion/neon-js": "^3.9.2"
+  }
+}
