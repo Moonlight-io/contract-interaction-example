@@ -51,7 +51,7 @@ function AccountPortalData(walletAddress, groupNumber) {
     .then(res => {
       const stack = res.result.stack;
       const contractValues = {
-        userBalance: Neon.u.Fixed8.fromReverseHex(stack[0].value === '' ? '00' : stack[0].value),
+        userBalance: Neon.u.fixed82num(stack[0].value === '' ? '00' : stack[0].value),
         groupMax: parseInt(Neon.u.reverseHex(stack[1].value), 16),
         groupUnlockBlock: parseInt(Neon.u.reverseHex(stack[2].value), 16) || 0,
         blockHeight: stack[3].value
